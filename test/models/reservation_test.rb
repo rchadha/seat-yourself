@@ -1,7 +1,14 @@
 require 'test_helper'
 
 class ReservationTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @reservation = reservations(:one)
+  end
+
+  test "fixture must be valid" do
+     assert @reservation.valid?
+  end
+
+
+
 end
