@@ -1,0 +1,26 @@
+<h1><%= @restaurant.name %></h1>
+
+<p>Capacity: <%= @restaurant.capacity %> </p>
+
+<h2>Make a reservation</h2>
+
+<% if @reservation.errors.any? %>
+    <% @reservation.errors.messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+<% end %>
+<%= form_for [@restaurant, @reservation] do |f| %>
+    <p>
+        Party size:
+        <%= f.text_field :party_size %>
+    </p>
+
+    <p>
+      Date & Time:
+      <%= f.datetime_select :reserved_at %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

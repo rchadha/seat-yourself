@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Restaurant.destroy_all
+
+10.times do
+  r = Restaurant.new
+  r.name = Faker::Company.name
+  r.capacity = Faker::Number.number(2)
+  r.save
+end
