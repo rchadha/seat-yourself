@@ -1,5 +1,7 @@
 
 <% @restaurants.each do |restaurant| %>
 	Name: <%= link_to restaurant.name, restaurant_path(restaurant) %>  <br>
-    Capacity: <%= restaurant.capacity %>  <br> <br>
+    Capacity: <%= restaurant.capacity %>  <br>
+    Address: <%= restaurant.address %>, <%= restaurant.city %>, <%= restaurant.postal_code %> <br>
+    Phone: <%= restaurant.phone_number %> <br><br>
 <% end%>

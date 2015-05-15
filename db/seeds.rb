@@ -12,5 +12,9 @@ Restaurant.destroy_all
   r = Restaurant.new
   r.name = Faker::Company.name
   r.capacity = Faker::Number.number(2)
+  r.city = Faker::Address.city
+  r.address = Faker::Address.street_address
+  r.postal_code = Faker::Address.postcode
+  r.phone_number = Faker::PhoneNumber.phone_number
   r.save
 end
