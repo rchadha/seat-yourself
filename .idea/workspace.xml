@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbbbebf6-2483-4267-b66f-16f926b86aad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erd.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150515234333_add_cuisine_id_to_restaurants.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150516173518_remove_field_name_from_reasturants.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150516184119_drop_cusine_resturants_table.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/cuisine.rb" afterPath="$PROJECT_DIR$/app/models/cuisine.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cbbbebf6-2483-4267-b66f-16f926b86aad" name="Default" comment="" />
     <ignored path="seat-yourself.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -23,6 +13,7 @@
     <file path="/restaurant.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431795330456" ignored="false" />
     <file path="/cuisine_restaurant.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431798420660" ignored="false" />
     <file path="/20150516184119_drop_cusine_resturants_table.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431802163981" ignored="false" />
+    <file path="/20150516190557_create_cuisines_restaurants.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431803606411" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +51,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restaurant.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="restaurant.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/restaurant.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="40" selection-end="40" vertical-scroll-proportion="0.032496307">
+            <state line="3" column="2" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20150516190557_create_cuisines_restaurants.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150516190557_create_cuisines_restaurants.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="34" selection-start="105" selection-end="105" vertical-scroll-proportion="0.064992614">
               <folding />
             </state>
           </provider>
@@ -96,6 +96,7 @@
         <option value="$PROJECT_DIR$/app/models/cuisine_restaurant.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150516184119_drop_cusine_resturants_table.rb" />
         <option value="$PROJECT_DIR$/app/models/cuisine.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20150516190557_create_cuisines_restaurants.rb" />
       </list>
     </option>
   </component>
@@ -767,7 +768,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/restaurant.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="40" selection-end="40" vertical-scroll-proportion="0.032496307">
+        <state line="3" column="2" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150516190557_create_cuisines_restaurants.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="105" selection-end="105" vertical-scroll-proportion="0.064992614">
           <folding />
         </state>
       </provider>
