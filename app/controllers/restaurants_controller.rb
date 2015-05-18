@@ -13,6 +13,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new
   def new
    @restaurant = Restaurant.new
+
   end
 
   #GET /restaurants/1/edit
@@ -26,7 +27,7 @@ class RestaurantsController < ApplicationController
 
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to restaurants_url, notice: 'Product was successfully created.' }
+        format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully created.' }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }
