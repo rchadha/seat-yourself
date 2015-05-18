@@ -11,24 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516190557) do
+ActiveRecord::Schema.define(version: 20150518184119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cuisine_restaurants", id: false, force: :cascade do |t|
+    t.integer "cuisine_id"
+    t.integer "restaurant_id"
+  end
+
+  add_index "cuisine_restaurants", ["cuisine_id"], name: "index_cuisine_restaurants_on_cuisine_id", using: :btree
+  add_index "cuisine_restaurants", ["restaurant_id"], name: "index_cuisine_restaurants_on_restaurant_id", using: :btree
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "cuisines_restaurants", id: false, force: :cascade do |t|
-    t.integer "cuisine_id",    null: false
-    t.integer "restaurant_id", null: false
-  end
-
-  add_index "cuisines_restaurants", ["cuisine_id"], name: "index_cuisines_restaurants_on_cuisine_id", using: :btree
-  add_index "cuisines_restaurants", ["restaurant_id"], name: "index_cuisines_restaurants_on_restaurant_id", using: :btree
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "restaurant_id"

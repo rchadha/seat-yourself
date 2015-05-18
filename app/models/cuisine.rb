@@ -1,4 +1,6 @@
 class Cuisine < ActiveRecord::Base
+  has_many :cuisine_restaurants
   #dependent destroy...if we destroy Cuisine, we should destroy from CusineRestaurants
- has_and_belongs_to_many :Restaurants
+  has_many :Restaurants, :through => :cuisine_restaurants
 end
+

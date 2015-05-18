@@ -25,8 +25,10 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
 
+
     respond_to do |format|
       if @restaurant.save
+        @restaurant.cuisine_restaurants.create(cuisine: Cuisine.first)
         format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully created.' }
         format.json { render :show, status: :created, location: @restaurant }
       else
