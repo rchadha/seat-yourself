@@ -1,7 +1,18 @@
 
+<% Cuisine.all.each do |cuisine| %>
+    <%= link_to cuisine.name, cuisine_path(cuisine) %>
+<% end %>
+<br><br>
+
 <% @restaurants.each do |restaurant| %>
 	Name: <%= link_to restaurant.name, restaurant_path(restaurant) %>  <br>
     Capacity: <%= restaurant.capacity %>  <br>
     Address: <%= restaurant.address %>, <%= restaurant.city %>, <%= restaurant.postal_code %> <br>
+    <b>Cuisne Type:
+    <% restaurant.cuisines.each do |c| %>
+       <%= c.name %>
+    <% end %>
+     </b>
+      <br>
     Phone: <%= restaurant.phone_number %> <br><br>
 <% end%>

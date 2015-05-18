@@ -7,8 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Restaurant.destroy_all
+#CuisineRestaurant.destroy_all
 
-10.times do
+x= 10
+
+x.times do |x|
   r = Restaurant.new
   r.name = Faker::Company.name
   r.capacity = Faker::Number.number(2)
@@ -17,4 +20,11 @@ Restaurant.destroy_all
   r.postal_code = Faker::Address.postcode
   r.phone_number = Faker::PhoneNumber.phone_number
   r.save
+  if x.even?
+    r.cuisine_restaurants.create(cuisine: Cuisine.first)
+  else
+    r.cuisine_restaurants.create(cuisine: Cuisine.last)
+
+  end
+
 end
