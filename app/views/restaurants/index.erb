@@ -1,6 +1,6 @@
 
 <% Cuisine.all.each do |cuisine| %>
-    <%= link_to cuisine.name, cuisine_path(cuisine) %>
+    <%= link_to cuisine.name, restaurants_path(:cuisine_id => cuisine.id) %>  <%= "|" unless cuisine == Cuisine.last %>
 <% end %>
 <br><br>
 

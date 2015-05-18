@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbbbebf6-2483-4267-b66f-16f926b86aad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/cuisine.rb" afterPath="$PROJECT_DIR$/app/models/cuisine.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/index.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/index.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seat-yourself.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,13 +12,13 @@
     <ignored path=".idea/dataSources.local.xml" />
     <file path="/Dummy.txt" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431967436279" ignored="false" />
     <file path="/seeds.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431979329870" ignored="false" />
-    <file path="/index.erb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431981483855" ignored="false" />
+    <file path="/index.erb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431983554200" ignored="false" />
     <file path="/cuisine.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431976935229" ignored="false" />
     <file path="/restaurant.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431972331280" ignored="false" />
     <file path="/cuisine_restaurant.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431972416090" ignored="false" />
     <file path="/20150516184119_drop_cusine_resturants_table.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431802163981" ignored="false" />
     <file path="/20150516190557_create_cuisines_restaurants.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431971339708" ignored="false" />
-    <file path="/restaurants_controller.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431975608934" ignored="false" />
+    <file path="/restaurants_controller.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431983491357" ignored="false" />
     <file path="/new.html.erb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431807410211" ignored="false" />
     <file path="/_form.html.erb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431831530182" ignored="false" />
     <file path="/20150518174925_drop_cuisines_restaurants_table.rb" changelist="cbbbebf6-2483-4267-b66f-16f926b86aad" time="1431971423388" ignored="false" />
@@ -43,10 +43,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="restaurants_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/restaurants_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="4" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/restaurants/index.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="50" selection-start="87" selection-end="87" vertical-scroll-proportion="0.037288137">
+            <state line="2" column="51" selection-start="88" selection-end="88" vertical-scroll-proportion="0.037288137">
               <folding />
             </state>
           </provider>
@@ -82,9 +91,9 @@
         <option value="$PROJECT_DIR$/app/models/cuisine_restaurant.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150518184119_rename_cuisines_restaurants_to_cuisine_restaurants.rb" />
         <option value="$PROJECT_DIR$/app/models/restaurant.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/cuisine.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/restaurants_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/restaurants/index.erb" />
       </list>
     </option>
@@ -509,7 +518,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21576433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21576433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -595,13 +604,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150516173518_remove_field_name_from_reasturants.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="100" selection-end="100" vertical-scroll-proportion="0.064992614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20150516184119_drop_cusine_resturants_table.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="35" selection-start="102" selection-end="102" vertical-scroll-proportion="0.064992614">
@@ -684,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/restaurants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="70" selection-start="513" selection-end="563" vertical-scroll-proportion="0.5450041">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/restaurant.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="19" selection-start="82" selection-end="82" vertical-scroll-proportion="0.03633361">
@@ -698,9 +693,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cuisines_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/restaurants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/restaurants/index.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="50" selection-start="87" selection-end="87" vertical-scroll-proportion="0.037288137">
+        <state line="2" column="51" selection-start="88" selection-end="88" vertical-scroll-proportion="0.037288137">
           <folding />
         </state>
       </provider>
