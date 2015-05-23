@@ -6,4 +6,7 @@ class Restaurant < ActiveRecord::Base
   #Restaurants must have a valid name
   validates :name, :capacity, presence: true
   validates :capacity, numericality: true
+
+  geocoded_by :address
+  after_validation :geocode
 end

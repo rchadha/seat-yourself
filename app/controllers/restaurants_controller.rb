@@ -1,19 +1,22 @@
 class RestaurantsController < ApplicationController
 
   def index
-  	#render "another_page"
-  	#@restaurants = Restaurant.all
-    if params[:cuisine_id]
+  	if params[:cuisine_id]
       @restaurants = Restaurant.joins(:cuisines).where("cuisine_id = ?", params[:cuisine_id])
     else
       @restaurants = Restaurant.all
     end
+    @hash = Gmaps4rails.build_markers(@restaurants) do |restaurant, marker|
+    marker.lat restaurant.latitude
+    marker.lng restaurant.longitude
+end
 
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
     @reservation = Reservation.new
+
   end
 
   # GET /restaurants/new
