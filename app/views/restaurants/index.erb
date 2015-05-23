@@ -1,10 +1,12 @@
-<%= link_to 'All Cuisines', restaurants_path %> | 
+
+<%= link_to 'All Cuisines', restaurants_path, class: 'btn btn-link' %> | 
 <% Cuisine.all.each do |cuisine| %>
-    <%= link_to cuisine.name, restaurants_path(:cuisine_id => cuisine.id) %>  <%= "|" unless cuisine == Cuisine.last %>
+    <%= link_to cuisine.name, restaurants_path(:cuisine_id => cuisine.id), class: 'btn btn-link' %>  <%= "|" unless cuisine == Cuisine.last %>
 <% end %>
 <br><br>
 
 <% @restaurants.each do |restaurant| %>
+<p>
 	Name: <%= link_to restaurant.name, restaurant_path(restaurant) %>  <br>
     Capacity: <%= restaurant.capacity %>  <br>
     Address: <%= restaurant.address %>, <%= restaurant.city %>, <%= restaurant.postal_code %> <br>
@@ -14,5 +16,6 @@
     <% end %>
      </b>
       <br>
-    Phone: <%= restaurant.phone_number %> <br><br>
+    Phone: <%= restaurant.phone_number %> 
+</p>
 <% end%>

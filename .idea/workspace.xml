@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbbbebf6-2483-4267-b66f-16f926b86aad" name="Default" comment="" />
+    <list default="true" id="cbbbebf6-2483-4267-b66f-16f926b86aad" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" afterPath="$PROJECT_DIR$/app/views/restaurants/show.html.erb" />
+    </list>
     <ignored path="seat-yourself.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -52,7 +55,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="-13.4838705">
+            <state line="23" column="40" selection-start="519" selection-end="519" vertical-scroll-proportion="-13.4838705">
               <folding />
             </state>
           </provider>
@@ -70,7 +73,7 @@
       <file leaf-file-name="reservation.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/reservation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.21800165">
+            <state line="20" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.36727878">
               <folding />
             </state>
           </provider>
@@ -717,14 +720,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/restaurants/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="-13.4838705">
+        <state line="23" column="40" selection-start="519" selection-end="519" vertical-scroll-proportion="-13.4838705">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/reservation.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.21800165">
+        <state line="20" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.36727878">
           <folding />
         </state>
       </provider>
