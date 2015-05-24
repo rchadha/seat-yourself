@@ -6,10 +6,18 @@ class RestaurantsController < ApplicationController
     else
       @restaurants = Restaurant.all
     end
-    @hash = Gmaps4rails.build_markers(@restaurants) do |restaurant, marker|
-    marker.lat restaurant.latitude
-    marker.lng restaurant.longitude
-end
+
+    @hash = Gmaps4rails.build_markers(@restaurants.all.where("latitude IS NOT NULL OR longitude IS NOT NULL")) do |restaurant, marker|
+        marker.lat restaurant.latitude
+        marker.lng restaurant.longitude
+        marker.infowindow restaurant.name
+          # marker.picture({
+          #   "url" => "/logo.png",
+          #   "width" =>  36,
+          #   "height" => 36
+          # })
+      
+      end
 
   end
 
