@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+  #before_action :authenticate_user!, :except => [:index]
+  #before_action :authenticate_user!, :only => [:show]
 
   def index
   	if params[:cuisine_id]
