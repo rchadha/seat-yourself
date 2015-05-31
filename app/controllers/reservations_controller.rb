@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-
+before_action :authenticate_user!
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = Reservation.new(sanitized_reservation_params)
