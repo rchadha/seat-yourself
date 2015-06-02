@@ -9,7 +9,8 @@
 
 <% @restaurants.each do |restaurant| %>
 <p>
-	Name: <%= link_to restaurant.name, restaurant_path(restaurant) %>  <br>
+	Name: <%= link_to restaurant.name, restaurant_path(restaurant) %> 
+  <%= link_to "Edit", edit_restaurant_path(restaurant) %> <br>
     Capacity: <%= restaurant.capacity %>  <br>
     Address: <%= restaurant.address %>, <%= restaurant.city %>, <%= restaurant.postal_code %> <br>
     <b>Cuisne Type:

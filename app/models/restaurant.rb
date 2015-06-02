@@ -7,6 +7,8 @@ class Restaurant < ActiveRecord::Base
   validates :name, :capacity, presence: true
   validates :capacity, numericality: true
 
+  mount_uploader :image, ImageUploader
+
   geocoded_by :address
   after_validation :geocode
 end
