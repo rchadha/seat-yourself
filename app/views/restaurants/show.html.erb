@@ -10,6 +10,16 @@
         <li><%= message %></li>
     <% end %>
 <% end %>
+
+<% if @restaurant.reservations.count > 0 %>
+  
+    <% @restaurant.reservations.each do |reservation| %>
+      <p> <%= reservation.party_size %>, <%= reservation.reserved_at %> 
+      </p>
+    <% end %>
+<% end %>
+
+
 <%= form_for [@restaurant, @reservation] do |f| %>
     <p>
         Party size:
