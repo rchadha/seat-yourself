@@ -7,6 +7,7 @@ class Restaurant < ActiveRecord::Base
   validates :name, :capacity, presence: true
   validates :capacity, numericality: true
 
+  #carrierwave
   mount_uploader :image, ImageUploader
 
   geocoded_by :address

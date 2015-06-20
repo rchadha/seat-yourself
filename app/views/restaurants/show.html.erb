@@ -21,6 +21,9 @@
 
 
 <%= form_for [@restaurant, @reservation] do |f| %>
+  <p>
+    <%= image_tag @restaurant.image_url(:thumb).to_s %>
+  </p>
     <p>
         Party size:
         <%= f.text_field :party_size %>
