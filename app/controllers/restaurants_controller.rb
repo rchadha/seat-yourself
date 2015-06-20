@@ -1,6 +1,9 @@
-class RestaurantsController < ApplicationController
+ class RestaurantsController < ApplicationController
   #before_action :authenticate_user!, :except => [:index]
-  #before_action :authenticate_user!, :only => [:show]
+  # only logged in user can see restaurant bookings to see any available spots.
+  before_action :authenticate_user!, :only => [:show]
+  #ensure that admin user can only access new, create, edit and update
+  before_action :ensure_admin, :only => [:new, :create, :edit, :update]
 
   def index
   	if params[:cuisine_id]
@@ -37,13 +40,22 @@ class RestaurantsController < ApplicationController
 
   #GET /restaurants/1/edit
   def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update(restaurant_params)
+      redirect_to restaurants_path
+    else
+      render :edit
+    end
 
   end
 
   #POST /restaurants
   def create
     @restaurant = Restaurant.new(restaurant_params)
-
 
     respond_to do |format|
       if @restaurant.save
