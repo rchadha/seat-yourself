@@ -10,7 +10,7 @@
 </div>
 
 <h2>Add a review:</h2>
-<%= form_for [@restaurant, @review] do |f| %>
+<%= form_for [@restaurant, @review], remote: true do |f| %>
 
   <p>
     <%= f.label :comment %>
