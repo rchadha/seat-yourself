@@ -2,6 +2,7 @@ class Restaurant < ActiveRecord::Base
   has_many :reservations
   has_many :cuisine_restaurants
   has_many :cuisines, :through => :cuisine_restaurants
+  has_many :reviews
 
   #Restaurants must have a valid name
   validates :name, :capacity, presence: true

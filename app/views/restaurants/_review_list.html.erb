@@ -1,0 +1,6 @@
+<ul>
+	<% @restaurant.reviews.each do |review| %>
+		<li> <%= review.comment %> (<%= review.created_at %>) </li>		
+	<% end %>
+	
+</ul>

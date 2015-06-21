@@ -29,6 +29,7 @@
   def show
     @restaurant = Restaurant.find(params[:id])
     @reservation = Reservation.new
+    @review = Review.new
 
   end
 
