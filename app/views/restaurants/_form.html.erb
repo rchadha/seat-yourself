@@ -49,9 +49,14 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Image:</label>
       <div class="col-sm-2">
+        <%= image_tag(@restaurant.image.thumb.url) if @restaurant.image? %>
         <%= f.file_field :image, class: "form-control" %>
+
+        <%= f.check_box :remove_image %>
+        Remove Restaurant Image
       </div>
     </div>
+
 
     <div class="form-group">
       <label class="col-sm-2">&nbsp;</label>

@@ -71,7 +71,7 @@
 
   private
   def restaurant_params
-    params.require(:restaurant).permit(:name, :capacity, :address, :city, :phone_number, :image)
+    params.require(:restaurant).permit(:name, :capacity, :address, :city, :phone_number, :image, :remove_image)
   end
 
 end
