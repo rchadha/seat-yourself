@@ -6,8 +6,14 @@
   before_action :ensure_admin, :only => [:new, :create, :edit, :update]
 
   def index
-  	if params[:cuisine_id]
-      @restaurants = Restaurant.joins(:cuisines).where("cuisine_id = ?", params[:cuisine_id])
+  	# if params[:cuisine_id]
+   #    @restaurants = Restaurant.joins(:cuisines).where("cuisine_id = ?", params[:cuisine_id])
+   #  else
+   #    @restaurants = Restaurant.all
+   #  end
+
+    if params[:query]
+      @restaurants = Restaurant.where("lower(name) like ?", "%#{params[:query].downcase}%")
     else
       @restaurants = Restaurant.all
     end
