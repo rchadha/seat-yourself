@@ -10,7 +10,10 @@
 Restaurant.destroy_all
 CuisineRestaurant.delete_all
 Cuisine.destroy_all
+User.destroy_all
 
+u = User.new(:email => "admin@example.com", :password => "test1234", :password_confirmation => "test1234", :is_admin => true)
+u.save
 
 c1 = Cuisine.new
 c1.name = "Japanese"
