@@ -14,6 +14,8 @@
 
     if params[:query]
       @restaurants = Restaurant.where("lower(name) like ?", "%#{params[:query].downcase}%")
+    elsif params[:cuisine_id]
+      @restaurants = Restaurant.joins(:cuisines).where("cuisine_id = ?", params[:cuisine_id])
     else
       @restaurants = Restaurant.all
     end

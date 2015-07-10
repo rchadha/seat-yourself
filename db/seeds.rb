@@ -6,6 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Add atleast two cuisine
+Restaurant.destroy_all
+CuisineRestaurant.delete_all
+Cuisine.destroy_all
+
+
+c1 = Cuisine.new
+c1.name = "Japanese"
+c1.save
+
+c2 = Cuisine.new
+c2.name = "Italian"
+c2.save
+
 Restaurant.destroy_all
 #CuisineRestaurant.destroy_all
 
