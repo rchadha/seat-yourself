@@ -1,9 +1,9 @@
 class Reservation < ActiveRecord::Base
   belongs_to :restaurant
 
-  validates :party_size, presence: true, numericality: { only_integer: true, greater_than: 0 }
-  validate :reservation_between_six_and_ten
-  validate :capacity_size, unless: "party_size.nil?"
+  # validates :party_size, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  # validate :reservation_between_six_and_ten
+  # validate :capacity_size, unless: "party_size.nil?"
 
   def capacity_size
   	existing_reservations = Reservation.where("restaurant_id = ? AND reserved_at > ? AND reserved_at < ?", self.restaurant_id, self.reserved_at.beginning_of_hour, self.reserved_at.end_of_hour)

@@ -3,7 +3,6 @@
 
 <p>Capacity: <%= @restaurant.capacity %> </p>
 
-
 <h2>Reviews</h2>
 <div id="review-list">
   <%= render partial: "review_list"%>
@@ -23,7 +22,8 @@
 
 <% end %>
 
-<h2>Make a reservation</h2>
+
+<h2>Existing Reservations</h2>
 
 <% if @reservation.errors.any? %>
     <% @reservation.errors.messages.each do |message| %>
@@ -34,12 +34,13 @@
 <% if @restaurant.reservations.count > 0 %>
   
     <% @restaurant.reservations.each do |reservation| %>
-      <p> <%= reservation.party_size %>, <%= reservation.reserved_at %> 
+      <p> Table for <%= reservation.party_size %> @ <%= reservation.reserved_at %> 
       </p>
     <% end %>
 <% end %>
 
 
+<h2>Make a reservation</h2>
 <%= form_for [@restaurant, @reservation] do |f| %>
   <p>
     <%= image_tag @restaurant.image_url(:thumb).to_s %>
